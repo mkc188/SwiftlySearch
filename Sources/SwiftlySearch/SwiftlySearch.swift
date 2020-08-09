@@ -139,8 +139,7 @@ fileprivate struct SearchBar<ResultContent: View>: UIViewControllerRepresentable
 
         var searchController: UISearchController? {
             didSet {
-                self.parent?.navigationItem.searchController = searchController
-                self.parent?.navigationController?.navigationBar.sizeToFit()
+                setup()
             }
         }
 
